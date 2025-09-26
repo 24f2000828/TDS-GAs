@@ -1,6 +1,19 @@
+name: My Custom Action
+
+# This action triggers on every push to the main branch
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch: # Allows you to run it manually from the Actions tab
+
 jobs:
   test:
+    runs-on: ubuntu-latest
     steps:
+      # This step has a name containing your email address
       - name: 24f2000828@ds.study.iitm.ac.in
-        run: echo "Hello, world!"
-      
+        run: echo "This step ran successfully!"
+
+      # Another example step
+      - name: Say Goodbye
+        run: echo "Action finished."
